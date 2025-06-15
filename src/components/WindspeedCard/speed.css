@@ -1,0 +1,36 @@
+
+
+.WindSpeedCard{
+    height: 300px;
+    width: 30vw;
+    margin: 20px;
+    box-shadow: 5px 5px 10px gray;
+    background-color: white;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.windspped-img-container{
+    height: 150px;
+    width: 150px;
+}
+
+.windspped-img-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.windspeed-title{
+    font-size: 2em;
+    color: gray;
+}
+
+.windspeed-value{
+    font-size: 3.2em;
+    display: flex;
+    gap: 20px;
+}

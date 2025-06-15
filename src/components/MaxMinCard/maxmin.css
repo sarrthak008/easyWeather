@@ -1,0 +1,22 @@
+
+.maxmin-card{
+    height: 149px;
+    width: 25vw;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 5px 5px 20px gray;
+    margin:0 auto ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.maxmin-info{
+    font-size: 3em;
+}
+
+.maxmin-title{
+    color: gray;
+    font-size: 1.2em;
+}
