@@ -8,7 +8,7 @@ import Card from '../../components/InfoCard/Card'
 import INFO1 from  "../../assets/info1.png"
 import WindSpeedCard from '../../components/WindspeedCard/WindSpeedCard'
 import MaxMinCard from '../../components/MaxMinCard/MaxMinCard'
-import GetCity from '../../components/GetCity/GetCity'
+import GetCity from '../GetCity/GetCity'
 
 
 const Home = () => {
@@ -31,21 +31,24 @@ const Home = () => {
 
 
 
-    const loadCityFromLocally =async ()=>{
+    const loadCityFromLocally =()=>{
         let city =  localStorage.getItem("city")
-        console.log(city)
-        if(city){
-            setCityName(city)
-            loadWeather()
-            setShowGetcity(false)
-        }
+          if(city){
+              setCityName(city)
+              loadWeather()
+          }else{
+             window.location.href="/"
+          }
+  
     }
 
     useEffect(()=>{
         loadCityFromLocally()
+    },[])
+
+    useEffect(()=>{
+      loadWeather()
     },[cityName])
- 
-   
 
   return (
     <>
@@ -92,7 +95,6 @@ const Home = () => {
            </div>
          </div>
     </div>
-     {showGetcity ? <GetCity setShowGetcity={setShowGetcity}/> : null}
     </>
   )
 }
